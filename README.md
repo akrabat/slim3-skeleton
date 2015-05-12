@@ -4,10 +4,16 @@ This is a simple skeleton project for Slim 3 that includes Twig, Flash messages 
 
 ## Create your project:
 
-    composer create-project -s dev akrabat/slim3-skeleton my-app
+    $ composer create-project -s dev akrabat/slim3-skeleton my-app`
+    
+(Answer "Y" to "Do you want to remove the existing VCS (.git, .svn..) history?")
 
-& answer "Y" to "Do you want to remove the existing VCS (.git, .svn..) history?"
 
+### Run it:
+
+1. `$ cd my-app`
+2. `$ php -S 0.0.0.0:8888 -t public public/index.php`
+3. Browse to http://localhost:8888
 
 ## Key directories
 
