@@ -1,0 +1,13 @@
+# For production, put your rewrite rules directly into your VirtualHost
+# directive and turn off AllowOverride.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    <IfModule mod_vhost_alias.c>
+        RewriteBase /
+    </IfModule>
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index_dev.php [QSA,L]
+</IfModule>
