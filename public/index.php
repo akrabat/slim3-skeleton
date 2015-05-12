@@ -21,7 +21,7 @@ $app = new \Slim\App($settings);
 require __DIR__ . '/../app/dependencies.php';
 
 // Register middleware
-// e.g: $app->add(new \Slim\Csrf\Guard);
+require __DIR__ . '/../app/middleware.php';
 
 // Register routes
 require __DIR__ . '/../app/routes.php';
