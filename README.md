@@ -4,10 +4,7 @@ This is a simple skeleton project for Slim 3 that includes Twig, Flash messages 
 
 ## Create your project:
 
-    $ composer create-project -s dev akrabat/slim3-skeleton my-app`
-    
-(Answer "Y" to "Do you want to remove the existing VCS (.git, .svn..) history?")
-
+    $ composer create-project -n -s dev akrabat/slim3-skeleton my-app`
 
 ### Run it:
 
