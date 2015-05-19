@@ -1,28 +1,30 @@
 <?php
 // DIC configuration
 
+$container = $app->getContainer();
+
 // -----------------------------------------------------------------------------
 // Service providers
 // -----------------------------------------------------------------------------
 
 // Twig
 $view = new \Slim\Views\Twig(
-    $app['settings']['view']['template_path'],
-    $app['settings']['view']['twig']
+    $app->settings['view']['template_path'],
+    $app->settings['view']['twig']
 );
 $twig = $view->getEnvironment();
 $twig->addExtension(new Twig_Extension_Debug());
-$app->register($view);
+$container->register($view);
 
 // Flash messages
-$app->register(new \Slim\Flash\Messages);
+$container->register(new \Slim\Flash\Messages);
 
 // -----------------------------------------------------------------------------
 // Service factories
 // -----------------------------------------------------------------------------
 
 // monolog
-$app['logger'] = function ($c) {
+$container['logger'] = function ($c) {
     $settings = $c['settings']['logger'];
     $logger = new \Monolog\Logger($settings['name']);
     $logger->pushProcessor(new \Monolog\Processor\UidProcessor());
@@ -34,6 +36,6 @@ $app['logger'] = function ($c) {
 // Action factories
 // -----------------------------------------------------------------------------
 
-$app['App\Action\HomeAction'] = function ($c) {
+$container['App\Action\HomeAction'] = function ($c) {
     return new App\Action\HomeAction($c['view'], $c['logger']);
 };
