@@ -18,7 +18,7 @@
     },
     "require": {
         "slim/slim": "dev-develop",
-        "slim/twig-view": "dev-master",
+        "slim/twig-view": "^1.1",
         "slim/flash": "dev-master",
         "monolog/monolog": "^1.13"
     }
