@@ -17,7 +17,7 @@
         }
     },
     "require": {
-        "slim/slim": "dev-develop",
+        "slim/slim": "^3.0",
         "slim/twig-view": "^1.1",
         "slim/flash": "dev-master",
         "monolog/monolog": "^1.13"
