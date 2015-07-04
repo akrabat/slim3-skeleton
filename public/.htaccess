@@ -9,5 +9,5 @@
     </IfModule>
 
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ index_dev.php [QSA,L]
+    RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
