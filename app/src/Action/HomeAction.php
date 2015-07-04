@@ -2,14 +2,14 @@
 namespace App\Action;
 
 use Slim\Views\Twig;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 
 final class HomeAction
 {
     private $view;
     private $logger;
 
-    public function __construct(Twig $view, Logger $logger)
+    public function __construct(Twig $view, LoggerInterface $logger)
     {
         $this->view = $view;
         $this->logger = $logger;
