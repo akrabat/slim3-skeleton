@@ -12,8 +12,8 @@ $view = new \Slim\Views\Twig(
     $app->settings['view']['template_path'],
     $app->settings['view']['twig']
 );
-$twig = $view->getEnvironment();
-$twig->addExtension(new Twig_Extension_Debug());
+$view->addExtension(new Twig_Extension_Debug());
+$view->addExtension(new \Slim\Views\TwigExtension($app->router, $app->request->getUri()));
 $container->register($view);
 
 // Flash messages
