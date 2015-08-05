@@ -14,10 +14,12 @@ $view = new \Slim\Views\Twig(
 );
 $view->addExtension(new Twig_Extension_Debug());
 $view->addExtension(new \Slim\Views\TwigExtension($app->router, $app->request->getUri()));
-$container->register($view);
+$container['view'] = $view;
 
 // Flash messages
-$container->register(new \Slim\Flash\Messages);
+$container['flash'] = function ($c) {
+    return new \Slim\Flash\Messages;
+};
 
 // -----------------------------------------------------------------------------
 // Service factories
