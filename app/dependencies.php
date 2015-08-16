@@ -8,13 +8,15 @@ $container = $app->getContainer();
 // -----------------------------------------------------------------------------
 
 // Twig
-$view = new \Slim\Views\Twig(
-    $app->settings['view']['template_path'],
-    $app->settings['view']['twig']
-);
-$view->addExtension(new Twig_Extension_Debug());
-$view->addExtension(new \Slim\Views\TwigExtension($app->router, $app->request->getUri()));
-$container['view'] = $view;
+$container['view'] = function ($c) {
+    $view = new \Slim\Views\Twig($c['settings']['view']['template_path'], $c['settings']['view']['twig']);
+
+    // Add extensions
+    $view->addExtension(new Slim\Views\TwigExtension($c['router'], $c['request']->getUri()));
+    $view->addExtension(new Twig_Extension_Debug());
+
+    return $view;
+};
 
 // Flash messages
 $container['flash'] = function ($c) {
