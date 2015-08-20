@@ -19,7 +19,7 @@
     "require": {
         "slim/slim": "^3.0@beta",
         "slim/twig-view": "^1.1",
-        "slim/flash": "dev-master",
+        "slim/flash": "^0.1.0",
         "monolog/monolog": "^1.13"
     }
 }

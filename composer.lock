@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2d30a1bc5fd79566557c386e1a9badca",
+    "hash": "d57949824d9b2e41e4f6740047064f83",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -35,16 +35,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0"
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dc5150cc608f2334c72c3b6a553ec9668a4156b0",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c0c0b4bee3aabce7182876b0d912ef2595563db7",
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15.x-dev"
+                    "dev-master": "1.16.x-dev"
                 }
             },
             "autoload": {
@@ -107,7 +107,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-07-12 13:54:09"
+            "time": "2015-08-09 17:44:44"
         },
         {
             "name": "nikic/fast-route",
@@ -154,16 +154,16 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "876bf0899d01feacd2a2e83f04641e51350099ef"
+                "reference": "3313af5935dbc560fab845b76a1ca351b47855af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/876bf0899d01feacd2a2e83f04641e51350099ef",
-                "reference": "876bf0899d01feacd2a2e83f04641e51350099ef",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/3313af5935dbc560fab845b76a1ca351b47855af",
+                "reference": "3313af5935dbc560fab845b76a1ca351b47855af",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2014-07-24 09:48:15"
+            "time": "2015-07-30 09:57:46"
         },
         {
             "name": "psr/http-message",
@@ -287,21 +287,20 @@
         },
         {
             "name": "slim/flash",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim-Flash.git",
-                "reference": "5cabf66370e10a2c1a128aa174be470140b89e28"
+                "reference": "1995ed53b77b8eeb67adf032de93c319f76aa5cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim-Flash/zipball/5cabf66370e10a2c1a128aa174be470140b89e28",
-                "reference": "5cabf66370e10a2c1a128aa174be470140b89e28",
+                "url": "https://api.github.com/repos/slimphp/Slim-Flash/zipball/1995ed53b77b8eeb67adf032de93c319f76aa5cd",
+                "reference": "1995ed53b77b8eeb67adf032de93c319f76aa5cd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0",
-                "pimple/pimple": "~3.0"
+                "php": ">=5.5.0"
             },
             "type": "library",
             "autoload": {
@@ -329,40 +328,33 @@
                 "provider",
                 "slim"
             ],
-            "time": "2015-05-30 09:37:10"
+            "time": "2015-08-16 22:49:06"
         },
         {
             "name": "slim/slim",
-            "version": "3.0-beta1",
+            "version": "3.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "2c128a852d35f6022b78fa293a7624a221eccdbf"
+                "reference": "7c6134467a34ee6d481ccdc9c6efe34049f95819"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/2c128a852d35f6022b78fa293a7624a221eccdbf",
-                "reference": "2c128a852d35f6022b78fa293a7624a221eccdbf",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/7c6134467a34ee6d481ccdc9c6efe34049f95819",
+                "reference": "7c6134467a34ee6d481ccdc9c6efe34049f95819",
                 "shasum": ""
             },
             "require": {
-                "container-interop/container-interop": "~1.1",
+                "container-interop/container-interop": "^1.1",
                 "nikic/fast-route": "^0.6",
-                "php": ">=5.4.0",
-                "pimple/pimple": "3.*",
-                "psr/http-message": "1.0"
+                "php": ">=5.5.0",
+                "pimple/pimple": "^3.0",
+                "psr/http-message": "^1.0"
             },
             "require-dev": {
-                "mockery/mockery": "dev-master@dev",
-                "phpunit/phpunit": "*",
-                "satooshi/php-coveralls": "dev-master"
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Slim\\": "Slim"
@@ -402,7 +394,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2015-07-02 17:52:57"
+            "time": "2015-08-10 15:29:12"
         },
         {
             "name": "slim/twig-view",
@@ -457,16 +449,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.18.2",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602"
+                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e8e6575abf6102af53ec283f7f14b89e304fa602",
-                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
+                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
                 "shasum": ""
             },
             "require": {
@@ -475,7 +467,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-master": "1.20-dev"
                 }
             },
             "autoload": {
@@ -510,15 +502,14 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-06-06 23:31:24"
+            "time": "2015-08-12 15:56:39"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "slim/slim": 10,
-        "slim/flash": 20
+        "slim/slim": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
