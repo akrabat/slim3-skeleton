@@ -9,10 +9,11 @@ $container = $app->getContainer();
 
 // Twig
 $container['view'] = function ($c) {
-    $view = new \Slim\Views\Twig($c['settings']['view']['template_path'], $c['settings']['view']['twig']);
+    $settings = $c->get('settings');
+    $view = new \Slim\Views\Twig($settings['view']['template_path'], $settings['view']['twig']);
 
     // Add extensions
-    $view->addExtension(new Slim\Views\TwigExtension($c['router'], $c['request']->getUri()));
+    $view->addExtension(new Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()));
     $view->addExtension(new Twig_Extension_Debug());
 
     return $view;
@@ -29,10 +30,10 @@ $container['flash'] = function ($c) {
 
 // monolog
 $container['logger'] = function ($c) {
-    $settings = $c['settings']['logger'];
-    $logger = new \Monolog\Logger($settings['name']);
+    $settings = $c->get('settings');
+    $logger = new \Monolog\Logger($settings['logger']['name']);
     $logger->pushProcessor(new \Monolog\Processor\UidProcessor());
-    $logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['path'], \Monolog\Logger::DEBUG));
+    $logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['logger']['path'], \Monolog\Logger::DEBUG));
     return $logger;
 };
 
@@ -41,5 +42,5 @@ $container['logger'] = function ($c) {
 // -----------------------------------------------------------------------------
 
 $container['App\Action\HomeAction'] = function ($c) {
-    return new App\Action\HomeAction($c['view'], $c['logger']);
+    return new App\Action\HomeAction($c->get('view'), $c->get('logger'));
 };
