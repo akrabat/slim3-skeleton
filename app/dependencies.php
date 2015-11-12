@@ -36,11 +36,3 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['logger']['path'], \Monolog\Logger::DEBUG));
     return $logger;
 };
-
-// -----------------------------------------------------------------------------
-// Action factories
-// -----------------------------------------------------------------------------
-
-$container['App\Action\HomeAction'] = function ($c) {
-    return new App\Action\HomeAction($c->get('view'), $c->get('logger'));
-};

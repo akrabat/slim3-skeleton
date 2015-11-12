@@ -1,21 +1,22 @@
 <?php
 namespace App\Action;
 
-use Slim\Views\Twig;
-use Psr\Log\LoggerInterface;
+use Interop\Container\ContainerInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 final class HomeAction
 {
     private $view;
     private $logger;
 
-    public function __construct(Twig $view, LoggerInterface $logger)
+    public function __construct(ContainerInterface $container)
     {
-        $this->view = $view;
-        $this->logger = $logger;
+        $this->view = $container->get('view');
+        $this->logger = $container->get('logger');
     }
 
-    public function dispatch($request, $response, $args)
+    public function dispatch(ServerRequestInterface $request, ResponseInterface $response, $args)
     {
         $this->logger->info("Home page action dispatched");
         
