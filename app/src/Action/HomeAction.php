@@ -3,8 +3,8 @@ namespace App\Action;
 
 use Slim\Views\Twig;
 use Psr\Log\LoggerInterface;
-use Psr\Http\Message\ResponseInterface as Request;
-use Psr\Http\Message\ServerRequestInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
 
 final class HomeAction
 {
