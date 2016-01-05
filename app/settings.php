@@ -1,6 +1,10 @@
 <?php
 return [
     'settings' => [
+        // Slim Settings
+        'determineRouteBeforeAppMiddleware' => false,
+        'displayErrorDetails' => false,
+
         // View settings
         'view' => [
             'template_path' => __DIR__ . '/templates',
