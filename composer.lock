@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d57949824d9b2e41e4f6740047064f83",
-    "content-hash": "612cee8e9ffd5a917261b369a2726b82",
+    "hash": "d5aad155269b3c82835a15652e9883c7",
+    "content-hash": "cbffd562f35559ce2be33817663b0abd",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -334,16 +334,16 @@
         },
         {
             "name": "slim/slim",
-            "version": "3.0.0-RC2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "c181a3a7666677fcf5dee2c03c504d5731262745"
+                "reference": "3b06f0f2d84dabbe81b6cea46ace46a3e883253e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/c181a3a7666677fcf5dee2c03c504d5731262745",
-                "reference": "c181a3a7666677fcf5dee2c03c504d5731262745",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/3b06f0f2d84dabbe81b6cea46ace46a3e883253e",
+                "reference": "3b06f0f2d84dabbe81b6cea46ace46a3e883253e",
                 "shasum": ""
             },
             "require": {
@@ -396,30 +396,29 @@
                 "micro",
                 "router"
             ],
-            "time": "2015-11-09 10:57:43"
+            "time": "2015-12-07 14:11:09"
         },
         {
             "name": "slim/twig-view",
-            "version": "1.2.0",
+            "version": "2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Twig-View.git",
-                "reference": "5f9d42133491772ea924ebcef11a6da2b236e33b"
+                "reference": "fe98eab8daee498cc2821f1ad2ff7123bc327844"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Twig-View/zipball/5f9d42133491772ea924ebcef11a6da2b236e33b",
-                "reference": "5f9d42133491772ea924ebcef11a6da2b236e33b",
+                "url": "https://api.github.com/repos/slimphp/Twig-View/zipball/fe98eab8daee498cc2821f1ad2ff7123bc327844",
+                "reference": "fe98eab8daee498cc2821f1ad2ff7123bc327844",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0",
-                "pimple/pimple": "~3.0",
-                "twig/twig": "~1.18"
+                "php": ">=5.5.0",
+                "psr/http-message": "^1.0",
+                "twig/twig": "^1.18"
             },
             "require-dev": {
-                "phpunit/phpunit": "*",
-                "psr/http-message": "~0.8"
+                "phpunit/phpunit": "^4.8.0"
             },
             "type": "library",
             "autoload": {
@@ -447,7 +446,7 @@
                 "twig",
                 "view"
             ],
-            "time": "2015-07-11 13:57:28"
+            "time": "2015-08-17 08:45:48"
         },
         {
             "name": "twig/twig",
@@ -514,9 +513,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "slim/slim": 10
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
