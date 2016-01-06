@@ -13,7 +13,8 @@ $container['view'] = function ($c) {
     $view = new \Slim\Views\Twig($settings['view']['template_path'], $settings['view']['twig']);
 
     // Add extensions
-    $view->addExtension(new Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()));
+    $basePath = rtrim(str_ireplace('index.php', '', $c['request']->getUri()->getBasePath()), '/');
+    $view->addExtension(new Slim\Views\TwigExtension($c['router'], $basePath));
     $view->addExtension(new Twig_Extension_Debug());
 
     return $view;
