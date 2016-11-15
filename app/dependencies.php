@@ -1,6 +1,15 @@
 <?php
 // DIC configuration
 
+use App\Action\HomeAction;
+use Interop\Container\ContainerInterface;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
+use Monolog\Processor\UidProcessor;
+use Slim\Flash\Messages;
+use Slim\Views\Twig;
+use Slim\Views\TwigExtension;
+
 $container = $app->getContainer();
 
 // -----------------------------------------------------------------------------
@@ -8,32 +17,33 @@ $container = $app->getContainer();
 // -----------------------------------------------------------------------------
 
 // Twig
-$container['view'] = function ($c) {
+$container['view'] = function (ContainerInterface $c) {
     $settings = $c->get('settings');
-    $view = new Slim\Views\Twig($settings['view']['template_path'], $settings['view']['twig']);
+    $view = new Twig($settings['view']['template_path'], $settings['view']['twig']);
 
     // Add extensions
-    $view->addExtension(new Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()));
+    $view->addExtension(new TwigExtension($c->get('router'), $c->get('request')->getUri()));
     $view->addExtension(new Twig_Extension_Debug());
 
     return $view;
 };
 
 // Flash messages
-$container['flash'] = function ($c) {
-    return new Slim\Flash\Messages;
+$container['flash'] = function () {
+    return new Messages;
 };
 
 // -----------------------------------------------------------------------------
 // Service factories
 // -----------------------------------------------------------------------------
 
-// monolog
-$container['logger'] = function ($c) {
+// Monolog
+$container['logger'] = function (ContainerInterface $c) {
     $settings = $c->get('settings');
-    $logger = new Monolog\Logger($settings['logger']['name']);
-    $logger->pushProcessor(new Monolog\Processor\UidProcessor());
-    $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['logger']['path'], Monolog\Logger::DEBUG));
+    $logger = new Logger($settings['logger']['name']);
+    $logger->pushProcessor(new UidProcessor());
+    $logger->pushHandler(new StreamHandler($settings['logger']['path'], Logger::DEBUG));
+
     return $logger;
 };
 
@@ -41,6 +51,6 @@ $container['logger'] = function ($c) {
 // Action factories
 // -----------------------------------------------------------------------------
 
-$container[App\Action\HomeAction::class] = function ($c) {
-    return new App\Action\HomeAction($c->get('view'), $c->get('logger'));
+$container[HomeAction::class] = function (ContainerInterface $c) {
+    return new HomeAction($c->get('view'), $c->get('logger'));
 };
