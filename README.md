@@ -9,8 +9,9 @@ This is a simple skeleton project for Slim 3 that includes Twig, Flash messages 
 ### Run it:
 
 1. `$ cd my-app`
-2. `$ php -S 0.0.0.0:8888 -t public public/index.php`
-3. Browse to http://localhost:8888
+2. `$ composer install`
+3. `$ php -S 0.0.0.0:8888 -t public public/index.php`
+4. Browse to http://localhost:8888
 
 ## Key directories
 
